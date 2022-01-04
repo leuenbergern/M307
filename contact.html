@@ -4,75 +4,75 @@
 <head>
     <title>Fotoagentur</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/icon" href="images/favicon.jpg">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 </head>
 
 <body>
-<header>
-    <div id=logo>
-        <a class="Logo" href="index.html">Fotoagentur</a>
+    <header>
+        <div id=logo>
+            <a class="Logo" href="index.html">Fotoagentur</a>
 
-    </div>
-    <nav>
-        <ul class="navigation">
-            <li><a href="login2.html">Galerie</a></li>
-            <li><a class="active" href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="login2.html">Galerie</a></li>
+                <li><a class="active" href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-    <section class="parrot">
-        <article class="boxes">
-            <h1>Kontakt</h1>
-            <br>
-            <p>Musterstrasse 13</p>
-            <br>
-            <p>Schweiz, Zürich</p>
-            <br>
-            <p><a class="schwarz" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a></p>
-            <br>
-            <p>+41 79 340 22 42</p>
-            <br>
-            <p>Fotograf der Woche</p>
-            <p id="demo"></p>
-        </article>
-        <article>
-            <img src="assets/position.svg" alt="platzhalter" id="platzhalter">
-        </article>
-    </section>
-    <section>
-        <!DOCTYPE html>
-        <html>
+        <section class="parrot">
+            <article class="boxes">
+                <h1>Kontakt</h1>
+                <br>
+                <p>Musterstrasse 13</p>
+                <br>
+                <p>Schweiz, Zürich</p>
+                <br>
+                <p><a class="schwarz" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a></p>
+                <br>
+                <p>+41 79 340 22 42</p>
+                <br>
+                <p>Fotograf der Woche</p> <p id="demo"></p>
+            </article>
+            <article>
+                <img src="assets/position.svg" alt="platzhalter" id="platzhalter">
+            </article>
+        </section>
+        <section>
+            <!DOCTYPE html>
+            <html>
 
-        <body>
+            <body>
 
-        <script>
-            let text = '{"fotografen":[' +
-                '{"firstName":"Max","lastName":"Muster" },' +
-                '{"firstName":"Berta","lastName":"Beispiel" },' +
-                '{"firstName":"Enrike","lastName":"Exempel" },' +
-                '{"firstName":"Manuel","lastName":"Modell" },' +
-                '{"firstName":"Veronica","lastName":"Vorbild" },' +
-                '{"firstName":"Emil","lastName":"Example" }]}';
+                <script>
+                    let text = '{"fotografen":[' +
+                        '{"firstName":"Max","lastName":"Muster" },' +
+                        '{"firstName":"Berta","lastName":"Beispiel" },' +
+                        '{"firstName":"Enrike","lastName":"Exempel" },' +
+                        '{"firstName":"Manuel","lastName":"Modell" },' +
+                        '{"firstName":"Veronica","lastName":"Vorbild" },' +
+                        '{"firstName":"Emil","lastName":"Example" }]}';
 
-            const obj = JSON.parse(text);
-            document.getElementById("demo").innerHTML =
-                obj.fotografen[3].firstName + " " + obj.fotografen[3].lastName;
-        </script>
+                    const obj = JSON.parse(text);
+                    document.getElementById("demo").innerHTML =
+                        obj.fotografen[3].firstName + " " + obj.fotografen[3].lastName;
+                </script>
 
-        </body>
+            </body>
 
-        </html>
+            </html>
 
-    </section>
-</main>
+        </section>
+    </main>
 
-<footer>
-    <a class="weiss" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a>
-</footer>
+    <footer>
+        <a class="weiss" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a>
+    </footer>
 </body>
 
 </html>

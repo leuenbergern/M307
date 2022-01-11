@@ -4,8 +4,9 @@
 <head>
     <title>Fotoagentur</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width>
-    <link rel=" stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="icon" type="image/icon" href="images/favicon.jpg">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 </head>
 
 <body>
@@ -36,8 +37,7 @@
                 <br>
                 <p>+41 79 340 22 42</p>
                 <br>
-                <p>Fotograf der Woche</p>
-                <p id="demo"></p>
+                <p>Fotograf der Woche</p> <p id="demo"></p>
             </article>
             <article>
                 <img src="assets/position.svg" alt="platzhalter" id="platzhalter">
@@ -60,7 +60,7 @@
 
                     const obj = JSON.parse(text);
                     document.getElementById("demo").innerHTML =
-                        obj.fotografen[0].firstName + " " + obj.fotografen[0].lastName;
+                        obj.fotografen[1].firstName + " " + obj.fotografen[1].lastName;
                 </script>
 
             </body>

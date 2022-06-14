@@ -96,7 +96,8 @@
 
         <p>
             <label>Name
-                <input type="text" name="customer_name" required>
+                <input type="text" name="customer_name" required minlength="4" maxlength="35">
+                
             </label>
         </p>
 
@@ -108,12 +109,12 @@
 
         <p>
             <label>Email
-                <input type="email" name="email_address">
+                <input type="email" name="email_address" required>
             </label>
         </p>
         <br>
         <fieldset>
-            <legend>Art der Fotos</legend>
+            <legend required>Art der Fotos</legend>
            <label class="choice"> <input type="radio" name="taxi" required value="car"> Hochzeit </label>
             <p><label class="choice"> <input type="radio" name="taxi" required value="van"> Porträt </label></p>
             <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Sonstiges </label></p>
@@ -130,14 +131,14 @@
         </fieldset>
 
         <p>
-            <label>Datum/Uhrzeit
+            <label required>Datum/Uhrzeit
                 <input type="datetime-local" name="pickup_time" required>
             </label>
         </p>
         <br>
         <br>
         <p>
-            <label>Ort des Shootings
+            <label required>Ort des Shootings
                 <select id="pickup_place" name="pickup_place">
                     <option value="" selected="selected">Genaue Angaben zur Ortschaft</option>
                     <option value="town_hall">Draussen</option>
@@ -148,7 +149,7 @@
         </p>
         <br>
         <p>
-            <label> Informationen/Fragen
+            <label required> Informationen/Fragen
                 <textarea name="comments" maxlength="500"></textarea>
             </label>
         </p>

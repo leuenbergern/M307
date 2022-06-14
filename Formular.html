@@ -96,14 +96,14 @@
 
         <p>
             <label>Name
-                <input type="text" name="customer_name" required minlength="4" maxlength="35">
+                <input type="text" name="customer_name" required minlength="4" maxlength="35" placeholder="Vorname Nachname">
                 
             </label>
         </p>
 
         <p>
             <label>Telefon
-                <input type="tel" name="phone_number">
+                <input type="tel" name="phone_number" placeholder="+41">
             </label>
         </p>
 
@@ -138,8 +138,8 @@
         <br>
         <br>
         <p>
-            <label required>Ort des Shootings
-                <select id="pickup_place" name="pickup_place">
+            <label>Ort des Shootings
+                <select id="pickup_place" name="pickup_place" required>
                     <option value="" selected="selected">Genaue Angaben zur Ortschaft</option>
                     <option value="town_hall">Draussen</option>
                     <option value="telepathy">Drinnen</option>

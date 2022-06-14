@@ -17,7 +17,6 @@ time, mark, audio, video
 
 main {
     width: 100vw;
-    initial-sc
 }
 
 main .carousel {
@@ -214,14 +213,6 @@ cursor:pointer;
 .box input[type="submit"]:hover{
     background: darkcyan;
 }
-
-
-
-
-
-
-
-
 
 
 

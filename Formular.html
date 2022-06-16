@@ -86,13 +86,12 @@
 
         
     </style>
-<script src="app.js"> </script>
+
 </head>
 
 <body class="hintergrundfarbe">
 
-    <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
-        action="/html/codes/html_form_handler.cfm">
+    <form class="myForm" id="form">
 
         <p>
             <label>Name
@@ -103,13 +102,13 @@
 
         <p>
             <label>Telefon
-                <input name="tel" type="text" required="required" placeholder="+41" title="tel">
+                <input id="telefon" name="tel" type="text" required="required" title="tel">
             </label>
         </p>
 
         <p>
             <label>Email
-                <input type="email" name="email_address" required>
+                <input type="email"  required>
             </label>
         </p>
         <br>
@@ -157,7 +156,7 @@
         <p><button>Buchung abschicken</button></p>
 
     </form>
-
+    <script src="form.js"> </script>
 </body>
 
 </html>

@@ -7,7 +7,6 @@ function validate() {
 
 
 /*
-
 function validate() {
   const telefon = document.getElementById('telefon');
   if (telefon.value !== "123") {
@@ -15,7 +14,6 @@ function validate() {
   }
   
 }
-
 */
 
 function phonenumber(inputtxt) {
@@ -53,9 +51,18 @@ function phonenumber(inputtxt) {
   function validate() {
     const informationen = document.getElementById('informationen');
     if (informationen.maxlength = "100") {
-      alert("Bitte geben sie maximal 100 Zeichen ein")
+      alert("Geben sie maximal 100 Zeichen ein")
     }
   }
+
+
+  function validate() {
+    const radio = document.getElementById('radio');
+    if(document.getElementById('radio').checked) {   
+      var selectedValue = document.getElementById('radio').value;  
+      alert("Wählen sie eine Option aus");    
+  }  
+    }  
 
 
   const form = document.getElementById('form');

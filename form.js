@@ -6,7 +6,7 @@ function validate() {
 }
 
 
-
+/*
 
 function validate() {
   const telefon = document.getElementById('telefon');
@@ -16,14 +16,35 @@ function validate() {
   
 }
 
+*/
 
-
-function validate() {
-  const email = document.getElementById('email');
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
-  {
-    return (true)
+function phonenumber(inputtxt) {
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (inputtxt.value.match(phoneno)) {
+      return true;
+    } else {
+      alert("Sie haben eine ungültige Telefonnummer eingegeben");
+      return false;
+    }
   }
+
+
+  function validate() {
+    const telefon = document.getElementById('telefon');
+    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (telefon.inputtxt.value.match(phoneno)) {
+        return true;
+      } else {
+        alert("Sie haben eine ungültige Telefonnummer eingegeben");
+        return false;
+      }
+  }
+
+  function validate() {
+    const email = document.getElementById('email');
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+      return (true)
+    }
     alert("Sie haben eine ungültige Email-Adresse eingegeben")
     return (false)
   }
@@ -37,14 +58,11 @@ function validate() {
   }
 
 
-const form = document.getElementById('form');
+  const form = document.getElementById('form');
 
-form.addEventListener('submit', function(e) {
-  //https://www.w3schools.com/jsref/event_preventdefault.asp
-  e.preventDefault();
-  //First validate form
-  validate();
-});
-
-
-
+  form.addEventListener('submit', function (e) {
+    //https://www.w3schools.com/jsref/event_preventdefault.asp
+    e.preventDefault();
+    //First validate form
+    validate();
+  });

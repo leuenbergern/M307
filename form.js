@@ -20,9 +20,13 @@ function validate() {
   if (informationen.length > 100) {
     alert("Geben sie maximal 100 Zeichen ein")
   }
-
+/*
   if (name.minlength = 4) {
     alert("Bitte geben sie mindestens 4 Zeichen ein")
+  }
+*/
+  if (name.input.value.length > 4) {
+    alert("Geben sie mindestens 4 Zeichen ein")
   }
 
   if(document.getElementById('radio').checked) {   

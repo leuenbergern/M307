@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>My Example</title>
+    <title>Formular</title>
 
     <!-- CSS -->
     <style>
@@ -43,8 +44,8 @@
             display: block;
         }
 
-       
-        
+
+
 
         .myForm input[type="text"],
         .myForm input[type="tel"],
@@ -83,20 +84,18 @@
             background: #ccc;
             cursor: pointer;
         }
-
-        
     </style>
 
 </head>
 
 <body class="hintergrundfarbe">
-
+    <script src="form.js"> </script>
     <form class="myForm" id="form">
 
         <p>
             <label>Name
                 <input id="name" type="text" name="customer_name" placeholder="Vorname Nachname" required>
-                
+
             </label>
         </p>
 
@@ -108,13 +107,13 @@
 
         <p>
             <label>Email
-                <input id="email" type="email"  required>
+                <input id="email" type="email" required>
             </label>
         </p>
         <br>
         <fieldset>
             <legend required>Art der Fotos</legend>
-           <label class="choice"> <input type="radio" name="taxi" required value="car"> Hochzeit </label>
+            <label class="choice"> <input type="radio" name="taxi" required value="car"> Hochzeit </label>
             <p><label class="choice"> <input type="radio" name="taxi" required value="van"> Porträt </label></p>
             <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Sonstiges </label></p>
         </fieldset>
@@ -153,10 +152,18 @@
             </label>
         </p>
 
-        <p><button>Buchung abschicken</button></p>
+        <button type="button" onclick="validate()" value="submit">Buchung </button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
 
     </form>
-    <script src="form.js"> </script>
+
 </body>
 
 </html>

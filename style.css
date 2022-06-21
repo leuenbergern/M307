@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video 
+{margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:top; background:none;font-family: 'Ubuntu', sans-serif;font-weight: 300;} 
+
+
+main {
+    width: 100vw;
+}
+
+main .carousel {
+margin: 40px;
+}
+
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 0px;
+}
+
+header {
+    background-color:darkcyan;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Logo {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+    }
+}
+
+.Logo {
+	font-size: 1.5em;
+    color:white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.Logo:hover {
+    text-decoration: none;
+    color:black;
+    transition: 0.3s;
+}
+
+nav {
+    color:black;
+}
+
+nav a {
+    color:white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color:black;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    background-size: 100%;
+    background-position: bottom;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
+article {
+    width: calc(50% - 110px);
+    background-color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: grey;
+    padding: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        text-align: center;
+    }
+}
+
+.frontpage {
+    /*bootstrap*/
+    display: flex;
+    justify-content: center;
+}
+
+nav .active {
+    font-weight: bold !important;
+    color: black;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.boxes {
+    background-color: //rgb(236, 236, 234);
+}
+
+img {
+    position:relative;
+}
+
+#platzhalter {
+    max-width: 70%;
+}
+
+.galerie {
+    max-width: 100%;
+}
+
+
+.weiss {
+    color: white;
+}
+
+.schwarz {
+    color: black;
+}
+
+
+.box h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.box input[type="text"],.box input[type="password"]
+{
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border:2px solid darkcyan;
+padding:10px 10px;
+width:220px;
+outline: none;
+color: black;
+border-radius: 24px;
+transition:0.25px;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+
+width:270px;
+border-color: darkcyan;
+
+}
+.box input[type="submit"]{
+
+
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid darkcyan;
+padding: 10px 35px;
+outline: none;
+color: black;
+border-radius: 24px;
+transition: 0.25px;
+cursor:pointer;
+    
+}
+.box input[type="submit"]:hover{
+    background: darkcyan;
+}
+
+
+
+
+
+.button {
+    border: 0;
+    color: white;
+    text-align: center;
+    border-color: darkcyan;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 24px;
+	padding:10px 35px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    transition-duration: 0.25s;
+    cursor: pointer;
+  }
+  
+  
+
+  
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid darkcyan;
+  }
+  
+  .button1:hover {
+    background-color: darkcyan;
+    color: white;
+  }
+  
+  
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Buchungsanfrage</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <header>
+        <div id=logo>
+            <a class="Logo" href="index.html">Fotoagentur</a>
+
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="login2.html">Galerie</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    
+    <!-- CSS -->
+    <style>
+        .myForm {
+            <!--  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; -->
+            font-size: 0.8em;
+            width: 30em;
+            padding: 0em;
+            border: 0px solid #ccc;
+            background-color: white;
+        }
+
+        .myForm * {
+            box-sizing: border-box;
+        }
+
+        .myForm fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        .myForm legend,
+        .myForm label {
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .myForm label.choice {
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        .myForm label {
+            text-align: left;
+            display: block;
+        }
+
+       
+        .myForm input[type="text"],
+        .myForm input[type="tel"],
+        .myForm input[type="email"],
+        .myForm input[type="datetime-local"],
+        .myForm select,
+        .myForm textarea {
+            float: right;
+            width: 60%;
+            border: 1px solid darkcyan;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 0.9em;
+            padding: 0.3em;
+        }
+
+        .myForm textarea {
+            height: 100px;
+        }
+
+        .myForm input[type="radio"],
+        .myForm input[type="checkbox"] {
+            margin-left: 40%;
+
+        }
+
+        .myForm button {
+         padding: 1em;
+   		 font-size: 16px;
+   		 border: 0;
+    		color: black;
+    		text-align: center;        
+			border-color: darkcyan;
+    		border-width: 2px;
+    		border-style: solid;
+			padding:10px 35px;
+			cursor: pointer;
+    		transition-duration: 0.25s;
+    		text-decoration: none;
+   			display: inline-block;
+            border-radius: 24px;
+            background: white;
+            margin-left: 40%;
+            margin-top: 1.8em;
+        }
+
+        .myForm button:hover {
+ 			background-color: darkcyan; 
+   			color: white; 
+   			border: 2px solid darkcyan;
+        }
+
+
+
+        
+    </style>
+
+</head>
+
+
+
+        <section class="parrot">
+            <article class="boxes">
+
+
+<body class="hintergrundfarbe">
+
+    <form class="myForm" id="form">
+
+        <p>
+        
+        
+            <h1>Anfrage</h1>
+        <br>
+    	<br>        
+            <label>Vorname/Nachname
+                <input id="name" type="text" name="customer_name" placeholder="Vorname/Nachname" required>
+            </label>
+        </p>
+        <br>
+
+            <label>Telefon
+                <input id="telefon" type="tel" name="telefon" placeholder="Telefon (000 000 00 00)" required>
+            </label>
+       	</p>
+    	<br>
+
+            <label>E-Mail
+                <input id="email" type="email" placeholder="E-Mail" required>
+            </label>
+        </p>
+        <br>
+        <fieldset>
+        <legend required>Art der Fotos</legend>
+           <label class="choice"> <input type="radio" name="art" required value=""> Hochzeit </label>
+            <p><label class="choice"> <input type="radio" name="art" required value=""> Porträt </label></p>
+            <p><label class="choice"> <input type="radio" name="art" required value=""> Sonstiges </label></p>
+        </fieldset>
+       	</p>
+       	
+        <fieldset>
+            <legend id="radio">Extras</legend>
+            <p><label class="choice"> <input type="checkbox" name="extras"> Accessoires fürs Shooting </label></p>
+            <p><label class="choice"> <input type="checkbox" name="extras"> Stylist/in fürs Shooting </label></p>
+            <p><label class="choice"> <input type="checkbox" name="extras"> Fotoalbum als Erinnerung </label></p>
+        </fieldset>
+
+            <br>
+
+            <label>Datum/Uhrzeit
+                <input type="datetime-local" name="pickup_time" required>
+            </label>
+        </p>
+        <br>
+        <br>
+        <p>
+            <label>Ort des Shootings
+                <select id="pickup_place" name="pickup_place" required>
+                    <option value="" selected="selected">Genaue Angaben zur Ortschaft</option>
+                    <option value="town_hall">Draussen</option>
+                    <option value="telepathy">Drinnen</option>
+                    <option value="both">Beides</option>
+                </select>
+            </label>
+        </p>
+        <br>
+        <p>
+            <label> Informationen/Fragen
+                <textarea id="informationen" placeholder="Informationen/Fragen" name="comments" maxlength="100"></textarea>
+            </label>
+               </p>
+
+        <p>
+        <button class="button button1">Anfrage senden</button>
+        </p>
+
+    </form>
+
+    <!-- Script muss nach dem Form eingebunden werden -->
+    <script type="text/javascript" src="form_new.js"></script>
+
+
+
+
+   </section>
+
+
+
+
+</body>
+    <footer>
+        <a class="weiss" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a>
+    </footer>
+</html>

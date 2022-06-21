@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Fotoagentur</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <meta name="viewport" content="width=device-width">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+
+<body>
+    <header>
+        <div id=logo>
+            <a class="Logo" href="index.html">Fotoagentur</a>
+
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="login2.html">Galerie</a></li>
+                <li><a class="active" href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="parrot">
+            <article class="boxes">
+                <h1>Kontakt</h1>
+                <br>
+                <p>Musterstrasse 13</br>
+                <p>Schweiz, Zürich</p>
+                <br>
+                <p><a class="schwarz" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a></br>
+                <p>+41 79 340 22 42</p>
+                <br>
+                <br>
+                <br>
+                <p><h1>Fotograf der Woche</h1>
+                </p>
+            	<br>
+				<p id="demo"></p>
+                <br>
+                <br>
+                <br>
+                <h1>Fotoshooting </h1>
+                <br>Ich interessiere mich für ein Fotoshooting<br>
+            
+                <a href="formular.html"><button class="button button1">Anfrage</button></a>
+            </article>
+            <article>
+                <img src="assets/position.svg" alt="platzhalter" id="platzhalter">
+            </article>
+        </section>
+        <section>
+            <!DOCTYPE html>
+            <html>
+
+            <body>
+
+                <script>
+                    let text = '{"fotografen":[' +
+                        '{"firstName":"Max","lastName":"Muster" },' +
+                        '{"firstName":"Berta","lastName":"Beispiel" },' +
+                        '{"firstName":"Enrike","lastName":"Exempel" },' +
+                        '{"firstName":"Manuel","lastName":"Modell" },' +
+                        '{"firstName":"Veronica","lastName":"Vorbild" },' +
+                        '{"firstName":"Emil","lastName":"Example" }]}';
+
+                    const obj = JSON.parse(text);
+                    document.getElementById("demo").innerHTML =
+                        obj.fotografen[1].firstName + " " + obj.fotografen[1].lastName;
+                </script>
+
+            </body>
+
+            </html>
+
+        </section>
+    </main>
+
+    <footer>
+        <a class="weiss" href="mailto:fotoagentur@gmail.com">fotoagentur@gmail.com</a>
+    </footer>
+</body>
+
+</html>

@@ -6,21 +6,14 @@ function validate() {
   const informationen = document.getElementById('informationen');
   console.log(informationen.value.length, name.value.length);
 
-  // var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/; // Telefonformat korrigiert (000 000 00 00)
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/; 
 
-
-/*
-  if (name.minlength = 4) {
-    alert("Bitte geben sie mindestens 4 Zeichen ein")
-  }
-*/
-  if (name.value.length < 1) { // KORR: 'name.value.length', verdrehtes Gleichheitszeichen, < statt >
+  if (name.value.length < 1) { 
    	 alert("Bitte geben Sie Ihren Vor- und Nachnamen ein.");
    	 return false;
   }
   
-  if (!telefon.value.match(phoneno)) { // KORR: 'telefon.value.match(phoneno)'
+  if (!telefon.value.match(phoneno)) { 
       alert("Bitte geben Sie eine gültige Telefonnummer ein.");
       return false;
   }
@@ -36,7 +29,7 @@ function validate() {
     return false;
   }
 
-  if (informationen.value.length > 150) { // KORR: 'informationen.value.length', verdrehtes Gleichheitszeichen, < statt >
+  if (informationen.value.length > 150) { 
     alert("Es sind maximal 150 Zeichen erlaubt.");
    	return false;
   }

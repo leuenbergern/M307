@@ -6,20 +6,27 @@ app.use(bodyParser.urlencoded());
 
 app.use(bodyParser.json());
 
-app.get('validation', function (req, res)
+app.post('/formular', function (req, res)
 
 
 
 
   {
     if ("email" in req.body) {
-      checkemail(req.body.phone);
+      if (! checkEmail(req.body.email)) {
+        res.status(400).send("email not valid");
+        return;
+      }
     } else {
-      console.log("email not provided")
+      res.sendStatus(400);
+      res.send("email not provided");
+      console.log("email not provided");
+      return;
+      
     }
 
 
-    res.send("");
+    res.send("Okay");
   })
 
 // Check email is valid

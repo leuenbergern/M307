@@ -8,7 +8,7 @@ function validate() {
 
   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/; 
 
-  if (name.value.length < 1) { 
+  if (name.value.length < 3) { 
    	 alert("Bitte geben Sie Ihren Vor- und Nachnamen ein.");
    	 return false;
   }

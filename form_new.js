@@ -41,7 +41,7 @@ function validate() {
   urlencoded.append("name", name.value);
   urlencoded.append("phone", telefon.value);
   urlencoded.append("art", getArt());
-  urlencoded.append("informationen", informationen.value.length);
+  urlencoded.append("informationen", informationen.value);
   
   var requestOptions = {
     method: 'POST',

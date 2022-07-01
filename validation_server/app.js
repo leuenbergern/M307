@@ -1,7 +1,11 @@
+var cors = require('cors')
+var fs = require('fs');
+var csvWriter = require('csv-write-stream')
+
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
-var cors = require('cors')
+
 
 app.use(cors())
 
@@ -82,6 +86,12 @@ app.post('/formular', function (req, res)
       return;
 
     }
+
+    var writer = csvWriter({sendHeaders: false})
+    writer.pipe(fs.createWriteStream('out.csv', {flags: 'a'}))
+    writer.write({name: req.body.name, phone: req.body.phone, email: req.body.email, radio: req.body.art, informationen: req.body.informationen})
+    writer.end()
+
     res.send('Formular abgesendet!')
   })
 
@@ -91,13 +101,9 @@ app.post('/formular', function (req, res)
 
 
 
-  var fs = require('fs');
-  var csvWriter = require('csv-write-stream')
+
   
-  var writer = csvWriter()
-  writer.pipe(fs.createWriteStream('out.csv'))
-  writer.write({hello: "world", foo: "bar", baz: "taco"})
-  writer.end()
+
 
 
 

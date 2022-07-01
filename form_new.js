@@ -23,8 +23,7 @@ function validate() {
       return false;
   }
 
-  if (document.getElementById('radio').checked) {   
-    var selectedValue = document.getElementById('radio').value;  
+  if (getArt()!= `hochzeit` && getArt()!='porträt' && getArt()!='sonstiges') {
     alert("Wählen Sie bitte die Art der Fotos aus.");
     return false;
   }
@@ -34,7 +33,27 @@ function validate() {
    	return false;
   }
 
-
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var urlencoded = new URLSearchParams();
+  urlencoded.append("email", email.value);
+  urlencoded.append("name", name.value);
+  urlencoded.append("phone", telefon.value);
+  urlencoded.append("art", getArt());
+  urlencoded.append("informationen", informationen.value.length);
+  
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: urlencoded,
+    redirect: 'follow'
+  };
+  
+  fetch("http://127.0.0.1:3000/formular", requestOptions)
+    .then(response => response.text())
+    .then(result => alert(result))
+    .catch(error => alert(error));
 }  
 
 const form = document.getElementById('form');
@@ -46,3 +65,12 @@ form.addEventListener('submit', function (e) {
   validate();
 });  
 
+
+function getArt() {
+  var ele = document.getElementsByName('art');
+    
+  for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked)
+      return ele[i].value;
+  }
+}

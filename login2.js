@@ -5,15 +5,9 @@ function validate() {
     if (username == "admin" && password == "1234") {
         alert("Login erfolgreich");
         window.open("works.html");
-    }
-
-
-    else {
+    } else {
         alert("Login fehlgeschlagen");
     }
 
 
 }
-
-
-

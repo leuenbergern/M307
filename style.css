@@ -142,10 +142,6 @@ nav ul {
     flex-direction: row;
 }
 
-.boxes {
-    background-color: //rgb(236, 236, 234);
-}
-
 img {
     position:relative;
 }
@@ -256,3 +252,87 @@ cursor:pointer;
   
   
 
+  .myForm {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    width: 30em;
+    padding: 0em;
+    border: 0px solid #ccc;
+    background-color: white;
+}
+
+.myForm * {
+    box-sizing: border-box;
+}
+
+.myForm fieldset {
+    border: none;
+    padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+    padding: 0;
+    font-weight: bold;
+}
+
+.myForm label.choice {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.myForm label {
+    text-align: left;
+    display: block;
+}
+
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+    float: right;
+    width: 60%;
+    border: 1px solid darkcyan;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.9em;
+    padding: 0.3em;
+}
+
+.myForm textarea {
+    height: 100px;
+}
+
+.myForm input[type="radio"],
+.myForm input[type="checkbox"] {
+    margin-left: 40%;
+
+}
+
+.myForm button {
+    padding: 1em;
+    font-size: 16px;
+    border: 0;
+    color: black;
+    text-align: center;
+    border-color: darkcyan;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px 35px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 24px;
+    background: white;
+    margin-left: 40%;
+    margin-top: 1.8em;
+}
+
+.myForm button:hover {
+    background-color: darkcyan;
+    color: white;
+    border: 2px solid darkcyan;
+}

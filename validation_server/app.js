@@ -87,9 +87,19 @@ app.post('/formular', function (req, res)
 
     }
 
-    var writer = csvWriter({sendHeaders: false})
-    writer.pipe(fs.createWriteStream('out.csv', {flags: 'a'}))
-    writer.write({name: req.body.name, phone: req.body.phone, email: req.body.email, radio: req.body.art, informationen: req.body.informationen})
+    var writer = csvWriter({
+      sendHeaders: false
+    })
+    writer.pipe(fs.createWriteStream('out.csv', {
+      flags: 'a'
+    }))
+    writer.write({
+      name: req.body.name,
+      phone: req.body.phone,
+      email: req.body.email,
+      radio: req.body.art,
+      informationen: req.body.informationen
+    })
     writer.end()
 
     res.send('Formular abgesendet!')
@@ -102,7 +112,7 @@ app.post('/formular', function (req, res)
 
 
 
-  
+
 
 
 
@@ -114,14 +124,15 @@ app.post('/formular', function (req, res)
 
 
 function checkArt(input) {
-  if (input!= `hochzeit` && input!='porträt' && input!='sonstiges') {
+  if (input != `hochzeit` && input != 'porträt' && input != 'sonstiges') {
     console.log("Bitt wählen sie eine Option an.");
     return false;
 
 
   } else {
     console.log(input, `Art ist korrekt`);
-    return true}
+    return true
+  }
 }
 
 

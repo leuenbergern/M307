@@ -174,10 +174,10 @@ function checkEmail(input) {
   if (re.test(input.trim())) {
     console.log(input,
 
-      `Die Email eingabe ist korrekt`);
+      `Die Email Eingabe ist korrekt`);
     return true
   } else {
-    console.error(input, 'Geben sie eine richtige Email Adresse ein');
+    console.error(input, 'Geben Sie eine richtige Email Adresse ein');
     return false
 
   } 
@@ -193,7 +193,7 @@ function checkPhone(input) {
   const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   if (re.test(input.trim())) {
     console.log(input,
-      `Funktioniert`);
+      `Die Telefonnummer ist korrekt`);
     return true
   } else {
     console.error(input, "Die Eingabe funktioniert nicht");

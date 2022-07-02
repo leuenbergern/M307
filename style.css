@@ -194,8 +194,6 @@ border-color: darkcyan;
 
 }
 .box input[type="submit"]{
-
-
 border: 0;
 background: none;
 display: block;
@@ -214,10 +212,6 @@ cursor:pointer;
     background: darkcyan;
 }
 
-
-
-
-
 .button {
     border: 0;
     color: white;
@@ -234,11 +228,7 @@ cursor:pointer;
     transition-duration: 0.25s;
     cursor: pointer;
   }
-  
-  
 
-  
-  
   .button1 {
     background-color: white; 
     color: black; 
@@ -249,8 +239,6 @@ cursor:pointer;
     background-color: darkcyan;
     color: white;
   }
-  
-  
 
   .myForm {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -285,7 +273,6 @@ cursor:pointer;
     text-align: left;
     display: block;
 }
-
 
 .myForm input[type="text"],
 .myForm input[type="tel"],

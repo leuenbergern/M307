@@ -180,7 +180,7 @@ function checkEmail(input) {
     console.error(input, 'Geben sie eine richtige Email Adresse ein');
     return false
 
-  }
+  } 
 
 
 }

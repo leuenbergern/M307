@@ -45,7 +45,7 @@ app.post('/formular', function (req, res)
 
     if ("phone" in req.body) {
       if (!checkPhone(req.body.phone)) {
-        res.status(400).send("Art ist nicht gültig");
+        res.status(400).send("Phone ist nicht gültig");
         return;
       }
     } else {

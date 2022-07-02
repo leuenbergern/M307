@@ -18,26 +18,26 @@ app.post('/formular', function (req, res)
   {
     if ("email" in req.body) {
       if (!checkEmail(req.body.email)) {
-        res.status(400).send("Geben sie eine korrekte Email ein");
+        res.status(400).send("Email ist nicht gültig");
         return;
       }
     } else {
       res.sendStatus(400);
-      res.send("Es wurde keine Email eingegeben");
-      console.log("Es wurde keine Email eingegeben");
+      res.send("Email wurde nicht bereitgestellt");
+      console.log("Email wurde nicht bereitgestellt");
       return;
     }
 
     // Status name
     if ("name" in req.body) {
       if (!checkName(req.body.name)) {
-        res.status(400).send("name not valid");
+        res.status(400).send("Name ist nicht gültig");
         return;
       }
     } else {
       res.sendStatus(400);
-      res.send("name not provided");
-      console.log("name not provided");
+      res.send("Name wurde nicht bereitgestellt");
+      console.log("Name wurde nicht bereitgestellt");
       return;
 
     }
@@ -45,13 +45,13 @@ app.post('/formular', function (req, res)
 
     if ("phone" in req.body) {
       if (!checkPhone(req.body.phone)) {
-        res.status(400).send("phone not valid");
+        res.status(400).send("Art ist nicht gültig");
         return;
       }
     } else {
       res.sendStatus(400);
-      res.send("phone not provided");
-      console.log("phone not provided");
+      res.send("Phone wurde nicht bereitgestellt");
+      console.log("Phone wurde nicht bereitgestellt");
       return;
 
     }
@@ -61,12 +61,12 @@ app.post('/formular', function (req, res)
     {
       if ("art" in req.body) {
         if (!checkArt(req.body.art)) {
-          res.status(400).send("art not valid");
+          res.status(400).send("Art ist nicht gültig");
           return;
         }
       } else {
-        res.status(400).send("art not provided");
-        console.log("art not provided");
+        res.status(400).send("Art wurde nicht bereitgestellt");
+        console.log("Art wurde nicht bereitgestellt");
         return;
 
       }
@@ -77,12 +77,12 @@ app.post('/formular', function (req, res)
 
     if ("informationen" in req.body) {
       if (!checkInformationen(req.body.informationen)) {
-        res.status(400).send("informationen not valid");
+        res.status(400).send("Die Information ist nicht gültig");
         return;
       }
     } else {
-      res.status(400).send("information not provided");
-      console.log("information not provided");
+      res.status(400).send("Informationen wurde nicht bereitgestellt");
+      console.log(" Informationen ist nicht gültig");
       return;
 
     }
@@ -115,7 +115,7 @@ app.post('/formular', function (req, res)
 
 function checkArt(input) {
   if (input!= `hochzeit` && input!='porträt' && input!='sonstiges') {
-    console.log("Bitt wählen sie Hochzeit an.");
+    console.log("Bitt wählen sie eine Option an.");
     return false;
 
 
@@ -133,7 +133,7 @@ function checkInformationen(input) {
   }
   console.log(input,
 
-    `Die Informationen ist korrekt`);
+    `Die Information ist korrekt`);
   return true
 }
 
@@ -176,7 +176,7 @@ function checkEmail(input) {
 
 function checkPhone(input) {
   if (input.length == 0) {
-    console.log("Phone nicht eingegeben")
+    console.log("Phone wurde nicht eingegeben")
     return false;
   }
   const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -185,7 +185,7 @@ function checkPhone(input) {
       `Funktioniert`);
     return true
   } else {
-    console.error(input, "Funktioniert nicht");
+    console.error(input, "Die Eingabe funktioniert nicht");
     return false;
   }
 }
